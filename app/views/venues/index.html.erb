@@ -1,15 +1,11 @@
-<h1>index</h1>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-3">
-      <div class="card mt-5 display=flex ">
-        <%= @venues.each do |venue| %>
-        <img src=<%= venue.image_url %> alt="image of <% venue.name %>">
-        <h2><%= venue.name %></h2>
-        <p><strong><%= venue.address %></strong></p>
-        <!-- <p><%= venue.description %></p> -->
-        <% end %>
-      </div>
-    </div>
+<h1>Check out our amazing venues 🛸</h1>
+<div class="grid">
+  <% @venues.each do |venue| %>
+  <div class="venue_card">
+    <%= image_tag "galaxy.jpg" %>
+    <h2><%= link_to venue.name, venues_path(venue) %></h2>
+    <p><strong><%= venue.address %></strong></p>
+    <p>Capacity:<%= venue.capacity %></p>
   </div>
+  <% end %>
 </div>
