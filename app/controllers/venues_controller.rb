@@ -1,12 +1,12 @@
 class VenuesController < ApplicationController
-  skip_before_action :authenticate_user!, only: :home
-  
+  skip_before_action :authenticate_user!, only: :index
+
   def index
     @venues = Venue.all
   end
 
   def show
-    @venue = Venue.find(venue_params)
+    @venue = Venue.find(params[:id])
   end
 
   def new
@@ -19,7 +19,7 @@ class VenuesController < ApplicationController
     if @venue.save
       redirect_to venue_path(@venue.id)
     else
-      render :new, status: :uprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
