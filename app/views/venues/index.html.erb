@@ -1,8 +1,7 @@
 <h1>index</h1>
 <div class="container">
   <div class="row">
-    <div class="col-lg-3">
-      <div class="card mt-2 display=flex ">
+    <div class="col-lg-3 venue_card">
         <%= @venues.each do |venue| %>
         <img src=<%= venue.image_url %> alt="image of <% venue.name %>">
         <h2><%= venue.name %></h2>
