@@ -31,7 +31,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_21_112031) do
     t.string "name"
     t.string "address"
     t.integer "capacity"
-    t.bigint "user_id", null: false # where do we change this to host_id??
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_venues_on_user_id"
