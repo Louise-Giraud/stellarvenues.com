@@ -17,7 +17,7 @@ class VenuesController < ApplicationController
     if @venue.save
       redirect_to venue_path(@venue.id)
     else
-      render :new, status: :uprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
