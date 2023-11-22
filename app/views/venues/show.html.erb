@@ -4,7 +4,6 @@
 <p><%= @venue.description %></p>
 
 <%= simple_form_for [@venue, @booking] do |f| %>
-<%= f.input :date %>
-<%= f.association :venue %>
-<%= f.button :submit %>
+  <%= f.input :date %>
+  <%= f.button :submit %>
 <% end %>
