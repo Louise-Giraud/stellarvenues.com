@@ -3,6 +3,10 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
+  def new
+    @booking = Booking.new
+  end
+
   def create
     @booking = Booking.create(booking_params)
     @venue = Venue.find(params[:venue_id])
@@ -13,6 +17,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date)
+    params.require(:booking).permit(:date, current_user)
   end
 end

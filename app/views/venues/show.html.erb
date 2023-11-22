@@ -3,7 +3,9 @@
 <h3> <%= "Capacity: #{@venue.capacity}" %> </h3>
 <p><%= @venue.description %></p>
 
-<%# <%= simple_form_for @booking do |f| %>
-  <%# <%= f.input :date %> %>
-  <%# <%= f.button :submit %> %>
-<%# <% end %> %> %>
+<%= simple_form_for([@venue, @booking]) do |f| %>
+<%= f.input :date %>
+<%= f.association :venue %>
+<%= f.association :current_user %>
+<%= f.button :submit %>
+<% end %>
