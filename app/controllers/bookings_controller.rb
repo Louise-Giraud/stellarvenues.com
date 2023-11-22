@@ -22,9 +22,13 @@ class BookingsController < ApplicationController
   # end
 
   def confirm
+    @booking = Booking.find(params[:booking_id])
+    @booking.status = 1
   end
 
   def decline
+    @booking = Booking.find(params[:booking_id])
+    @booking.status = 2
   end
 
   private
