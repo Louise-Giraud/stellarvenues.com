@@ -1,0 +1,9 @@
+<h1>My bookings</h1>
+<h3>Pending requests</h3>
+<% @pending_bookings_as_owner.each do |booking| %>
+  <ul>
+    <strong><%= booking.venue.name %></strong>
+    <%= booking.date %>
+    <%= booking.user.username %>
+  </ul>
+<% end %>

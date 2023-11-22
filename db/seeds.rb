@@ -12,6 +12,9 @@ require 'faker'
 Venue.destroy_all
 User.destroy_all
 user = User.create(email: "user2445@gmail.com", password: "123456", username: "amazing_user")
+user1 = User.create(email: "user2446@gmail.com", password: "123456", username: "kat_user")
+user2 = User.create(email: "user2447@gmail.com", password: "123456", username: "louise_user")
+
 
 puts 'Creating 10 fake venues...'
 
