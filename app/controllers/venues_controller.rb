@@ -1,10 +1,12 @@
 class VenuesController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
+
   def index
     @venues = Venue.all
   end
 
   def show
-    @venue = Venue.find(venue_params)
+    @venue = Venue.find(params[:id])
   end
 
   def new
