@@ -19,7 +19,8 @@
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa-solid fa-user-astronaut avatar" alt= "dropdown menu"></i>
+            <%# <i class="fa-solid fa-user-astronaut avatar" alt= "dropdown menu" ></i> %>
+            <%= render "shared/avatar_pic" %>
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>

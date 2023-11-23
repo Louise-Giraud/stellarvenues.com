@@ -5,7 +5,7 @@
 <div class="grid">
   <% @venues.each do |venue| %>
   <div class="venue_card">
-    <%= image_tag "galaxy.jpg" %>
+    <%= render "index_photos", venue:venue %>
     <h2><%= link_to venue.name, venue_path(venue) %></h2>
     <p><strong><%= venue.address %></strong></p>
     <p><i class="fa-solid fa-people-group" style="color: #ffffff;"></i>  Capacity: <%= venue.capacity %></p>
