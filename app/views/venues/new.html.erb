@@ -1,8 +1,10 @@
-<h1>Add a new venue</h1>
-<%= simple_form_for(@venue) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :capacity %>
-  <%= f.input :description %>
-  <%= f.submit %>
-<% end %>
+<div class="booking_container">
+  <h1>Add a new venue</h1>
+  <%= simple_form_for(@venue) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :capacity %>
+    <%= f.input :description %>
+    <%= f.submit %>
+  <% end %>
+</div>
