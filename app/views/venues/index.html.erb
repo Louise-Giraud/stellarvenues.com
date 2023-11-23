@@ -1,6 +1,9 @@
 <div class="d-flex justify-content-between align-items-center m-3">
-  <h1>Check out our amazing venues 🛸</h1>
-  <%= link_to "Add a venue", new_venue_path, class: "btn btn-primary" %>
+  <div class="d-flex row">
+  <h1>Welcome to the universe 🛸</h1>
+  <h3>Check out stellar venues</h3>
+  </div>
+  <%= link_to "Add a new galaxy to the universe", new_venue_path, class: "btn btn-primary" %>
 </div>
 <div class="grid">
   <% @venues.each do |venue| %>
