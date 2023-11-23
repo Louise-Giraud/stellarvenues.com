@@ -1,17 +1,17 @@
 <h1>✨ <strong>My bookings</strong> ✨</h1>
 <div class="booking_container m-3">
   <% if current_user.venues.joins(:bookings).exists? %>
-      <h2><strong>My venues</strong></h2>
-      <%= render "pending_bookings_as_owner" %>
-      <%= render "confirmed_bookings_as_owner" %>
-    <% else %>
-      <p>You dont have any bookings in your venues!</p>
+    <h2><strong>My venues</strong></h2>
+    <%= render "pending_bookings_as_owner" %>
+    <%= render "confirmed_bookings_as_owner" %>
+  <% else %>
+    <p>You dont have any bookings in your venues!</p>
   <% end %>
 </div>
 
 <div class="booking_container m-3">
   <% if current_user.bookings.exists? %>
-    <% render "bookings_as_booker" %>
+    <%= render "bookings_as_booker" %>
   <% else %>
     <p>You don't have any upcoming bookings</p>
   <% end %>
