@@ -1,16 +1,18 @@
 <div class="booking_container">
   <h1> <%= @venue.name %> </h1>
-  <h3> <%= "Address: #{@venue.address}" %> </h3>
-  <h3> <%= "Capacity: #{@venue.capacity}" %> </h3>
+    <%= cl_image_tag @venue.photo.key, class: "pic" %>
+  <h3> <%= "🪐 Address: #{@venue.address}" %> </h3>
+  <h4> <%= "👽 Capacity: #{@venue.capacity}" %> </h3>
 
-  <h3><%= "Logistic partner on-site: #{@venue.logistic_partner}" %></h3>
-  <h3><%= "Available ressources on-site:  #{@venue.available_ressources}" %></h3>
-  <h3><%= "Access: #{@venue.access}" %></h3>
+  <h4><%= "👩‍🚀 Logistic partner on-site: #{@venue.logistic_partner}" %></h3>
+  <h4><%= "🔦 Available ressources on-site:  #{@venue.available_ressources}" %></h3>
+  <h4><%= "🛸 Access: #{@venue.access}" %></h3>
 
   <p><%= @venue.description %></p>
 
-  <%= simple_form_for [@venue, @booking] do |f| %>
-    <%= f.input :date %>
-    <a class="btn_show"><%= f.button :submit %></a>
-    <% end %>
+<div class="booking-form">
+  <% unless current_user == @venue.user %>
+    <h2><%="Book the galaxy"%></h2>
+    <%= render "booking_form" %>
+  <% end %>
 </div>
