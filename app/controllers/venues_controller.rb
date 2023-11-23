@@ -17,7 +17,7 @@ class VenuesController < ApplicationController
   def create
     @venue = Venue.new(venue_params)
     @venue.user = current_user
-    if @venue.save 
+    if @venue.save
       redirect_to venue_path(@venue.id)
     else
       render :new, status: :unprocessable_entity
@@ -27,6 +27,6 @@ class VenuesController < ApplicationController
   private
 
   def venue_params
-    params.require(:venue).permit(:name, :address, :capacity, :description, :logistic_partner, :access, :available_ressources, current_user)
+    params.require(:venue).permit(:name, :address, :capacity, :description, :logistic_partner, :access, :available_ressources, :photo)
   end
 end
