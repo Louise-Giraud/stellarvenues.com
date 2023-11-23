@@ -1,6 +1,6 @@
 <div class="booking_container">
   <h1> <%= @venue.name %> </h1>
-    <%= cl_image_tag @venue.photo.key, class: "pic" %>
+    <%= render "show_photo" %>
   <h3> <%= "🪐 Address: #{@venue.address}" %> </h3>
   <h4> <%= "👽 Capacity: #{@venue.capacity}" %> </h3>
 
