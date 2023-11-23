@@ -1,14 +1,52 @@
-<h1>My bookings</h1>
-<h3>Pending requests</h3>
-<div class="grid">
-  <% @pending_bookings_as_owner.each do |booking| %>
-    <div class="pending_booking_card">
-      <ul>
-        <li><strong><%= booking.venue.name %></strong></li>
-        <li><%= booking.date %></li>
-        <li><%= booking.user.username %></li>
-        <p>✅ ❌</p>
-      </ul>
-    </div>
-  <% end %>
+<h1>✨ My bookings ✨</h1>
+<div class="container m-3">
+  <h3>Pending requests for my venues</h3>
+  <div class="grid">
+    <% @pending_bookings_as_owner.each do |booking| %>
+      <div class="pending_booking_card">
+        <ul>
+          <li><strong><%= booking.venue.name %></strong></li>
+          <li><%= booking.date %></li>
+          <li><%= booking.user.username %></li>
+          <div class="d-flex justify-content-between align-items-center m-3">
+            <%= simple_form_for [booking] do |f| %>
+              <%= f.submit "CONFIRM", class: "btn btn-success" %>
+              <%= f.submit "DECLINE", class: "btn btn-danger" %>
+            <% end %>
+          </div>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container m-3">
+  <h3>Upcoming bookings in my venues</h3>
+  <div class="grid">
+    <% @confirmed_bookings_as_owner.each do |booking| %>
+      <div class="pending_booking_card">
+        <ul>
+          <li><strong><%= booking.venue.name %></strong></li>
+          <li><%= booking.date %></li>
+          <li><%= booking.user.username %></li>
+          <%= link_to 'Cancel booking', booking_path(booking.id), class: "btn btn-primary", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel this booking?" } %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container m-3">
+  <h3>Venues I have booked</h3>
+  <div class="grid">
+    <% @bookings_as_booker.each do |booking| %>
+      <div class="pending_booking_card">
+        <ul>
+          <li><strong><%= booking.venue.name %></strong></li>
+          <li><%= booking.date %></li>
+          <%= link_to 'Cancel booking', booking_path(booking.id), class: "btn btn-primary m-2", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to cancel this booking?" } %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
 </div>
