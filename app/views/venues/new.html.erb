@@ -1,12 +1,14 @@
-<h1>Add a new venue</h1>
-<%= simple_form_for(@venue) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :capacity %>
-  <%= f.input :logistic_partner %>
-  <%= f.input :access %>
-  <%= f.input :available_ressources %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+<div class="booking_container">
+  <h1>Add a new venue</h1>
+    <%= simple_form_for(@venue) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :capacity %>
+      <%= f.input :logistic_partner %>
+      <%= f.input :access %>
+      <%= f.input :available_ressources %>
+      <%= f.input :description %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit %>
+  <% end %>
+</div>

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="booking_container">
   <h1> <%= @venue.name %> </h1>
     <%= cl_image_tag @venue.photo.key, class: "pic" %>
   <h3> <%= "🪐 Address: #{@venue.address}" %> </h3>
@@ -15,5 +15,4 @@
     <h2><%="Book the galaxy"%></h2>
     <%= render "booking_form" %>
   <% end %>
-</div>
 </div>
