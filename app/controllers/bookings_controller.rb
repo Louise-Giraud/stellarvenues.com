@@ -21,14 +21,21 @@ class BookingsController < ApplicationController
   #   @owner_bookings_pending = @owner_bookings.where status: 0
   # end
 
-  def confirm
-    @booking = Booking.find(params[:booking_id])
-    @booking.status = 1
+  def update
+    @booking = Booking.find(params[:id])
+    if params[:commit] == "CONFIRM"
+      @booking.status = 1
+    else
+      @booking.status = 2
+    end
+    @booking.save!
+    redirect_to dashboard_path
   end
 
-  def decline
-    @booking = Booking.find(params[:booking_id])
-    @booking.status = 2
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to dashboard_path, status: :see_other
   end
 
   private
