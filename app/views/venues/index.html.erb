@@ -10,7 +10,7 @@
   <div class="venue_card">
     <%= render "index_photos", venue:venue %>
     <h2><%= link_to venue.name, venue_path(venue) %></h2>
-    <p><strong><%= venue.address %></strong></p>
+    <p>Portal address: <strong><%= venue.address %></strong></p>
     <p><i class="fa-solid fa-people-group" style="color: #ffffff;"></i>  Capacity: <%= venue.capacity %></p>
   </div>
   <% end %>
