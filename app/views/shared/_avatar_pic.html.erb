@@ -1,4 +1,4 @@
-<% if current_user.photo.attached? %>
+<% if user.photo.attached? %>
     <%= cl_image_tag current_user.photo.key  alt= "dropdown menu" %>
   <% else %>
   <i class="fa-solid fa-user-astronaut avatar" alt= "dropdown menu" ></i>
