@@ -1,5 +1,5 @@
 <div class="booking_container">
-  <h1>Add a new venue</h1>
+  <h1>Add a new galaxy</h1>
     <%= simple_form_for(@venue) do |f| %>
       <%= f.input :name %>
       <%= f.input :address %>
@@ -9,6 +9,6 @@
       <%= f.input :available_ressources %>
       <%= f.input :description %>
       <%= f.input :photo, as: :file %>
-      <%= f.submit %>
+      <a class="fun-btn"><%= f.submit %></a>
   <% end %>
 </div>
