@@ -1,14 +1,26 @@
 <div class="booking_container">
-  <h1> <%= @venue.name %> </h1>
     <%= render "show_photo" %>
-  <h3> <%= "🪐 Address: #{@venue.address}" %> </h3>
-  <h4> <%= "👽 Capacity: #{@venue.capacity}" %> </h3>
-
-  <h4><%= "👩‍🚀 Logistic partner on-site: #{@venue.logistic_partner}" %></h3>
-  <h4><%= "🔦 Available ressources on-site:  #{@venue.available_ressources}" %></h3>
-  <h4><%= "🛸 Access: #{@venue.access}" %></h3>
-
-  <p><%= @venue.description %></p>
+    <div class="show-title">
+      <h1> <%= @venue.name %> </h1>
+    </div>
+    <div class="show-title">
+      <h3> <%= "🪐 Address: #{@venue.address}" %> </h3>
+    </div>
+    <div class="show-text">
+      <h4> <%= "👽 Capacity: #{@venue.capacity}" %> </h3>
+    </div>
+    <div class="show-text">
+      <h4><%= "👩‍🚀 Logistic partner on-site: #{@venue.logistic_partner}" %></h3>
+    </div>
+    <div class="show-text">
+      <h4><%= "🔦 Available ressources on-site:  #{@venue.available_ressources}" %></h3>
+    </div>
+    <div class="show-text">
+      <h4><%= "🛸 Access: #{@venue.access}" %></h3>
+    </div>
+    <div class="show-description">
+      <p><%= @venue.description %></p>
+    </div>
 
 <div class="booking-form">
   <% unless current_user == @venue.user %>
