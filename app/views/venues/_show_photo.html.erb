@@ -1,5 +1,7 @@
 <% if @venue.photo.attached? %>
     <%= cl_image_tag @venue.photo.key, class: "pic" %>
-  <% else %>
+<% elsif @venue.image_url %>
+  <img src="<%= @venue.image_url %>">
+<% else %>
   <%= image_tag "galaxy.jpg", class: "pic" %>
 <% end %>
