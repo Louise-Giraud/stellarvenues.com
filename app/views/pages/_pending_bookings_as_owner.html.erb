@@ -6,6 +6,7 @@
         <h3><strong><%= link_to booking.venue.name, venue_path(booking.venue.id) %></strong></h3>
         <p>Date: <%= booking.date %></p>
         <p>Booked by: <%= booking.user.username %><p>
+         <%= cl_image_tag booking.user.photo.key, class: "avatar" %>
         <%= simple_form_for [booking] do |f| %>
           <%= f.submit "CONFIRM", class: "btn btn-success" %>
           <%= f.submit "DECLINE", class: "btn btn-danger" %>
