@@ -1,4 +1,7 @@
-<%= simple_form_for [@venue, @booking] do |f| %>
-  <%= f.input :date %>
-  <a class="btn"><%= f.button :submit %></a>
-  <% end %>
+<div class="booking-form">
+  <h2><%="Book the galaxy"%></h2>
+  <%= simple_form_for [@venue, @booking] do |f| %>
+    <%= f.input :date %>
+    <a class="fun-btn"><%= f.button :submit %></a>
+    <% end %>
+</div>

@@ -22,9 +22,7 @@
       <p><%= @venue.description %></p>
     </div>
 
-<div class="booking-form">
+
   <% unless current_user == @venue.user %>
-    <h2><%="Book the galaxy"%></h2>
     <%= render "booking_form" %>
   <% end %>
-</div>
