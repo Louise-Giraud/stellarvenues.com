@@ -11,11 +11,15 @@
 require 'faker'
 Venue.destroy_all
 User.destroy_all
-user = User.new(email: "user2445@gmail.com", password: "123456", username: "amazing_user")
+user = User.new(email: "user2445@gmail.com", password: "123456", username: "Xenomorph")
 pic = URI.open('app/assets/images/Thumb-ET.webp')
 user.photo.attach(io: pic, filename: 'Thumb-ET.webp', content_type: 'image/webp')
 user.save
 
+user_booker = User.new(email: "leia@gmail.com", password: "123456", username: "Leia")
+pic = URI.open('app/assets/images/leia.jpg')
+user_booker.photo.attach(io: pic, filename: 'leia.jpg', content_type: 'image/jpg')
+user_booker.save!
 
 # user1 = User.create(email: "user2446@gmail.com", password: "123456", username: "kat_user")
 # user2 = User.create(email: "user2447@gmail.com", password: "123456", username: "louise_user")
