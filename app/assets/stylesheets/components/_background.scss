@@ -2,8 +2,15 @@ body {
   background-image: url("https://smd-cms.nasa.gov/wp-content/uploads/2023/06/webb-flickr-52259221868-30e1c78f0c-4k-jpg.webp");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 
-  h1, h2, h3, p {
+
+  h1, h2, h3 {
     color: white;
+    font-family: 'Kdam Thmor Pro';
+  }
+
+  p {
+    font-family: 'Space Mono';
   }
 }
