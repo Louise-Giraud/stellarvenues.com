@@ -5,7 +5,7 @@
     <%= render "pending_bookings_as_owner" %>
     <%= render "confirmed_bookings_as_owner" %>
   <% else %>
-    <p>You dont have any bookings in your venues!</p>
+    <p>You don't have any bookings in your galaxies.</p>
   <% end %>
 </div>
 
@@ -13,6 +13,6 @@
   <% if current_user.bookings.exists? %>
     <%= render "bookings_as_booker" %>
   <% else %>
-    <p>You don't have any upcoming bookings</p>
+    <p>You have not booked any galaxies.</p>
   <% end %>
 </div>
