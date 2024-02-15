@@ -1,6 +1,6 @@
 <div class="booking_container">
   <h1>Add a new galaxy</h1>
-    <%= simple_form_for(@venue) do |f| %>
+    <%= simple_form_for(@venue, @chatroom) do |f| %>
       <%= f.input :name %>
       <%= f.input :address %>
       <%= f.input :capacity %>
