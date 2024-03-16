@@ -21,7 +21,7 @@ default: &default
 
 development:
   <<: *default
-  database: amazing_venues_development
+  database: stellar_venues_development
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -79,6 +79,6 @@ test:
 #
 production:
   <<: *default
-  database: amazing_venues_production
-  username: amazing_venues
-  password: <%= ENV["AMAZING_VENUES_DATABASE_PASSWORD"] %>
+  database: stellar_venues_production
+  username: stellar_venues
+  password: <%= ENV["STELLAR_VENUES_DATABASE_PASSWORD"] %>
