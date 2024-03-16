@@ -1,1 +1,3 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# stellarvenues.com 🪐
+
+Clone of AirBnB model where users can rent and book galaxies for their events.
